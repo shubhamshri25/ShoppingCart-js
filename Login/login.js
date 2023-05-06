@@ -40,8 +40,8 @@ form.addEventListener("submit", (e) => {
         setTimeout(() => {
           window.location.href = "../shop/shop.html";
         }, 1000);
-
         return;
+        
       }
     }
 
