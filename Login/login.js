@@ -36,6 +36,11 @@ form.addEventListener("submit", (e) => {
         errmsg.style.color = "#7ECD71";
         errmsg.style.display = "block";
         errmsg.style.margin = "1rem";
+
+        setTimeout(() => {
+          window.location.href = "../shop/shop.html";
+        }, 1000);
+
         return;
       }
     }

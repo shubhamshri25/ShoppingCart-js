@@ -11,13 +11,69 @@ body {
   overflow-x: hidden;
 }
 
+.navbar {
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 10px;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid white;
+}
+
 a {
   color: white;
   text-decoration: none;
 }
 
+span {
+  margin: 0px 10px;
+}
+
+.sidenav {
+  background-color: black;
+  color: white;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+  z-index: 2;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  width: 180px;
+  overflow: hidden;
+}
+
+.sidenav > section {
+  border-bottom: 1px solid white;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.sidenav h3 {
+  margin: 10px 5px;
+}
+
+.main-content {
+  margin-left: 180px;
+  margin-top: 1rem;
+  padding: 20px;
+}
+
 ul {
   list-style: none;
+  padding: 0;
+  margin: 10px 5px;
 }
 
 input[type="range"] {
@@ -33,94 +89,36 @@ datalist {
   width: 100%;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  position: sticky;
-  z-index: 100;
-  top: 0;
-
-  background-color: black;
-  border-bottom: 1px solid white;
-  padding: 1rem;
-  font-size: 1rem;
-}
-
-nav .brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-nav .nav-items a {
-  margin: 0 1rem;
-}
-
-main {
-  display: flex;
-  height: 100vh;
-}
-
-main aside {
-  flex: 0.2;
+#filter-btn{
+  border: 1px solid white;
   background-color: black;
   color: white;
-  height: 100vh;
-  position: fixed;
-  padding-top: 1rem;
-  width: 11rem;
-}
-
-main main-content {
-  display: block;
-  width: 100%;
-  margin-left: 11rem;
-}
-
-aside section {
-  padding: 1rem;
-  border-bottom: 1px solid white;
-}
-
-aside section:last-child {
-  border-bottom: none;
-}
-
-aside section title {
-  display: block;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-aside section li {
-  margin-bottom: 0.75rem;
-}
-
-aside section label {
+  padding: 10px;
+  text-align: center;
+  margin-left: 25px;
   cursor: pointer;
-  margin-left: 0.25rem;
 }
 
-main-content {
-  padding: 1rem;
-  position: relative;
+.main-content {
+  display: flex;
+  flex-direction: column;
 }
 
-main-content input {
+.main-content input {
+  border: 1px solid black;
   padding: 1rem;
-  width: 100%;
-  position: relative;
+  width: 98%;
+  margin: 5px auto;
   font-size: 1rem;
 }
 
-main-content .filters {
+.main-content .filters {
   display: flex;
   margin-top: 1rem;
   gap: 1rem;
 }
 
-main-content .filter {
+.main-content .filter {
   flex: 1;
   text-align: center;
   padding: 0.5rem 1rem;
@@ -128,47 +126,51 @@ main-content .filter {
   cursor: pointer;
 }
 
-main-content .active {
+
+.main-content .active {
   background-color: black;
   color: white;
 }
 
-main-content section {
-  margin-top: 1.2rem;
-}
-
-main-content section title {
-  display: block;
-  font-size: 1.5rem;
-}
-
-main-content .items {
+.product-container {
+  margin-top: 40px;
   display: flex;
-  width: auto;
-  overflow-x: scroll;
-  padding: 1rem 0;
-  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+   gap: 20px;
 }
 
-main-content .items .item {
+.main-content .item {
   border: 1px solid black;
-  width: 30%;
+  width: 230px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-main-content .items .item img {
-  max-width: 100%;
+.main-content  .item img {
+  width: 100%;
+  height: 250px;
 }
 
-main-content .items .item .row {
+.main-content .item .row {
   display: flex;
   justify-content: space-between;
 }
 
-main-content .items .item .info {
+.main-content .item .info {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
 }
 
-main-content .items .item button {
+.main-content .item .card-title{
+  font-size: 1.2rem;
+}
+
+.main-content .item button {
   width: 100%;
   border-radius: none;
   border: none;
@@ -179,14 +181,18 @@ main-content .items .item button {
   cursor: pointer;
 }
 
-main-content .items .item .colors {
+.main-content .item .colors {
   display: flex;
-  margin: 1rem 0;
 }
 
-main-content .items .item .circle {
+.main-content  .item .circle {
   width: 20px;
   height: 20px;
   border-radius: 100%;
   margin: 0 5px;
+}
+
+#addBtn{
+  width: 100%;
+  margin: 0;
 }

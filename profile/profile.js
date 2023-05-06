@@ -109,6 +109,10 @@ changePassBtn.addEventListener("click", () => {
   errmsg2.style.color = "#FF4F4F";
   errmsg2.style.display = "block";
   errmsg2.style.margin = "1rem";
+
+  // oldPass.value = "";
+  // newPass.value = "";
+  // cnfNewPass.value = "";
 });
 
 logOutBtn.addEventListener("click", () => {
